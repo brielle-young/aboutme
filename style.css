@@ -10,6 +10,7 @@
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
 
+
 body{
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.62;
@@ -57,9 +58,10 @@ a:hover{ text-decoration:underline; }
 .card{
   border:1px solid var(--border);
   border-radius: 12px;
-  padding: 12px;
+  padding: 20px;
   background:#fff;
 }
+
 
 .sidebar{ position: static; }      /* default: not sticky on mobile */
 .sidebar img{
@@ -90,6 +92,10 @@ footer{
   color: var(--muted);
 }
 
+.sidebar img{
+  width: min(100%, 220px);
+}
+
 /* Desktop / larger screens */
 @media (min-width: 860px){
   body{ font-size: 17px; }
@@ -113,7 +119,27 @@ footer{
 
 /* Very small screens */
 @media (max-width: 420px){
+  .sidebar{
+    display: none;
+  }
+  .grid{
+    grid-template-columns: 1fr;       /* single column */
+  }
   .nav-inner{ padding: 10px 6px; gap: 10px; }
   .container{ padding: 12px 6px; }
   h1{ font-size: 26px; }
+}
+
+
+@media (max-width: 900px){
+  .sidebar{
+    display: none;
+  }
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
 }
