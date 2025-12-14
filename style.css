@@ -1,1 +1,119 @@
+:root{
+  --max: 980px;
+  --text:#111;
+  --muted:#555;
+  --border:#e6e6e6;
+  --link:#1a4fd8;
+  --bg:#fff;
+}
 
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.62;
+  font-size: 16px;
+}
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* NAV */
+.nav{ border-bottom:1px solid var(--border); background:#fff; }
+.nav-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 15px;              /* tighter */
+  display:flex;
+  gap: 15px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.nav .name{ font-weight:700; margin-right: 6px; }
+.nav a{
+  font-size: 16px;
+  color: var(--text);
+  padding: 4px 0;
+}
+.nav a.active{ border-bottom:2px solid var(--text); padding-bottom:2px; }
+
+/* PAGE */
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 8px;              /* much tighter horizontal margin */
+}
+
+/* LAYOUT */
+.layout{
+  display:grid;
+  grid-template-columns: 1fr;      /* mobile-first */
+  gap: 14px;
+  align-items:start;
+}
+
+/* Sidebar */
+.card{
+  border:1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background:#fff;
+}
+
+.sidebar{ position: static; }      /* default: not sticky on mobile */
+.sidebar img{
+  width:90%;
+  border-radius: 12px;
+  border:1px solid var(--border);
+  object-fit: cover;
+  display:block;
+  margin-bottom: 10px;
+}
+.sidebar .title{ font-weight:500; font-size: 15px; margin: 6px 0; }
+.sidebar .subtitle{ color:var(--muted); font-size: 11px; margin: 0 0 10px; }
+
+.ul-tight{font-weight:500; font-size: 15px; margin: 6px 0;}
+.muted{ color: var(--muted); }
+
+h1{ font-size: 28px; margin: 0 0 10px; }
+h2{ font-size: 20px; margin: 22px 0 10px; }
+h3{ font-size: 17px; margin: 16px 0 8px; }
+
+hr{ border:0; border-top:1px solid var(--border); margin: 16px 0; }
+
+footer{
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top:1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Desktop / larger screens */
+@media (min-width: 860px){
+  body{ font-size: 17px; }
+
+  .container{ padding: 18px 10px; }
+
+  .layout{
+    grid-template-columns: 230px 1fr;  /* slimmer sidebar (visible change) */
+    gap: 20px;
+  }
+
+  .sidebar{
+    position: sticky;
+    top: 12px;                         /* sticky only on desktop */
+  }
+
+  h1{ font-size: 32px; }
+  h2{ font-size: 22px; }
+  h3{ font-size: 18px; }
+}
+
+/* Very small screens */
+@media (max-width: 420px){
+  .nav-inner{ padding: 10px 6px; gap: 10px; }
+  .container{ padding: 12px 6px; }
+  h1{ font-size: 26px; }
+}

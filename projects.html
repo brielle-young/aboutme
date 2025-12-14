@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research — Brielle Young</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <span class="name"><a href="index.html">Brielle Young</a></span>
+    <a href="index.html">About</a>
+    <a class="active" href="projects.html">Projects</a>
+    <a href="blog.html">Blog Posts</a>
+    <a href="cv.html">CV</a>
+    <a href="engrg3900.html">ENGRG3900</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="card">
+        <img src="images/headshot.jpg" alt="Headshot" onerror="this.style.display='none'">
+        <div class="title">Brielle Young</div>
+        <div class="title">Cornell University '27</div>
+        <hr>
+        <div class="title">
+          <p><a href="https://github.com/brielle-young" target="_blank" rel="noreferrer">GitHub</a></p>
+          <p><a href="https://linkedin.com/in/brielleyoung" target="_blank" rel="noreferrer">LinkedIn</a></p>
+          <p class="muted"><span>bgy5@cornell.edu</span></p> </div>
+      </div>
+    </aside>
+    <main>
+       <section class="projects">
+
+      <article class="project">
+        <h1>Projects</h1>
+        <p> I work at the intersection of computational biology, disease evolution, and environmental systems, using statistical and machine learning methods to study how biological systems respond to pressure - vaccination, climate, and human intervention.</p>
+        <h2>Temporal and Affinity-Dependent Somatic Hypermutation Dynamics in Germinal Centers</h2>
+        <p class="meta">Undergraduate Researcher · Applied Phylogenetics Lab, Cornell · 2025–Present</p>
+        <p>
+          Modeling somatic hypermutation in germinal centers using stochastic bitstring simulations.
+          Comparing vaccination regimes to quantify immune robustness and evolutionary outcomes.
+        </p>
+      </article>
+
+      <article class="project">
+        <h2>Graph-based phylogenetic analysis of RNA virus RdRp sequences</h2>
+        <p class="meta">NSF Biology REU · American Museum of Natural History · 2025</p>
+        <p>
+          Graph-based analysis of RNA virus metatranscriptomes revealing fragmentation patterns
+          that challenge alignment-based phylogenetics.
+        </p>
+      </article>
+
+      <article class="project">
+        <h2>Climate-Driven Coastal Disease Risk</h2>
+        <p class="meta">NatGeo × The Nature Conservancy · 2024</p>
+        <p>
+          Spatial modeling of harmful algal blooms using GIS and satellite data to inform
+          conservation and coastal risk mitigation.
+        </p>
+      </article>
+
+      <article class="project">
+        <h2>Applied Machine Learning for Early-ADHD Diagnosis</h2>
+        <p class="meta">Break Through Tech AI · 2024–2025</p>
+        <p>
+          Built supervised and unsupervised ML models in Python, including predictive ADHD models
+          using neuroimaging and socio-demographic data.
+        </p>
+      </article>
+
+      <article class="project">
+        <h2>Species Distribution Modeling with Neural Networks</h2>
+        <p class="meta">AI Studio Fellow · Mila · 2024</p>
+        <p>
+          Multi-label MLP predicting encounter rates for 670 bird species.
+          Performance optimized through tuning and ablation studies.
+        </p>
+        <p>Learn more through our <a href="https://github.com/brielle-young/bird-species-distribution-modeling-with-location-information">repository.</a></p>
+      </article>
+
+      <article class="project">
+        <h2>Technical Leadership in AI Systems</h2>
+        <p class="meta">AI Project Manager · NEXIS Student Technology Lab · 2024</p>
+        <p>
+          Led a 10-person ML team developing physical health prediction model. Managed 50-person AI lab, and 7 projects.
+          Recognized as 'Best Leader' by management for execution, collaboration, and impact.
+        </p>
+        <p>Learn more through our<a href="https://github.com/brielle-young/nexis-healthcare-ml-fitness-prediction"> repository.</a></p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Brielle Young</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
